@@ -1,0 +1,116 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #7c3aed;
+  --secondary-color: #4f46e5;
+  --background-dark: #0f172a;
+  --background-light: rgba(124, 58, 237, 0.05);
+  --text-light: #f9fafb;
+  --text-secondary: #9ca3af;
+  --transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+
+  section {
+    padding: 80px 0;
+
+    &:nth-child(even) {
+      background: var(--background-light);
+    }
+  }
+}
+
+.button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all var(--transition-duration) ease;
+  cursor: pointer;
+
+  &.primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    &:focus {
+      outline: 2px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+  }
+
+  &.secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+    &:hover {
+      background: var(--background-light);
+    }
+
+    &:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
