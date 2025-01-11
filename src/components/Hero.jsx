@@ -46,7 +46,7 @@ const Hero = () => {
             letterSpacing: '0.05em',
           }}
         >
-          Backend Enginner & Machine Learning Researcher
+          Backend Engineer & Machine Learning Researcher
         </Typography>
 
         {/* Subtitle */}
