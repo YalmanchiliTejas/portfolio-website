@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Button, Stack, Chip, Avatar } from '@mui/material';
 import { Link, Security, School, FitnessCenter, Hub } from '@mui/icons-material';
-
+import agentTrailLogo from '../assets/logo.png';
 const projects = [
   {
     title: 'Soteria',
@@ -43,9 +43,9 @@ const projects = [
     logoGradient: 'linear-gradient(135deg, #f97316, #ec4899)',
   },
   {
-    title: 'Agent Relay SDK',
+    title: 'AgentTrail',
     description:
-      'Production observability SDK for tracing agent tool calls, resumable sessions, and LLM usage/spend tracking.',
+      'Production observability SDK and Trail for tracing agent tool calls, idempotent tool calls, compensations and deterministic replays, and LLM usage/spend tracking.',
     features: [
       'Automatic tracing of tool inputs/outputs with decorators.',
       'Resumable agent sessions with budget enforcement and run replay.',
@@ -54,7 +54,7 @@ const projects = [
     ],
     tech: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'AWS'],
     websiteLink: 'https://agent-relay-website.vercel.app/',
-    logoUrl: 'https://agent-relay-website.vercel.app/favicon.ico',
+    logoImage: agentTrailLogo,
     logoIcon: Hub,
     logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
   },
