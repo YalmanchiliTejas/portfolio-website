@@ -20,7 +20,7 @@ const papers = [
   year: '2025',
   abstract: `Cycle GAN in Pytorch specifically for art-style translation, constricting the dataset to paintings across multiple styles and evaluating photo to art and art to art conversions within this focused domain. In addition to reproducing the original objective from the paper (LSGAN with cycle and identity losses), we will explore replacing the LSGAN adversarial component with alternative formulations such as hinge loss, while also incorporating additional regularization terms including perceptual content loss (LPIPS/VGG), Gram-matrix style loss, and discriminator feature matching loss. Our goal is to evaluate how this modified objective influences style fidelity, realism, and content preservation in the translated images`,
   topics: ['CVD', 'GANs'],
-  pdf: '../../public/CS593_project_final_report.pdf'
+  pdf: '/CS593_project_final_report.pdf'
 },
 ];
 
@@ -30,7 +30,7 @@ const Papers = () => {
       id="papers"
       sx={{
         py: 10,
-        background: 'radial-gradient(circle at top, rgba(124, 58, 237, 0.2), transparent 55%)',
+        background: 'transparent',
       }}
     >
       <Container maxWidth="lg">
