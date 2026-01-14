@@ -9,6 +9,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import './styles/main.scss';
 import Education from './components/Education';
+import Papers from './components/Papers';
 
 const darkTheme = createTheme({
   palette: {
@@ -52,6 +53,7 @@ function App() {
         <Hero />
         <Education />
         <Projects />
+        <Papers />
         <Skills />
         <Experience />
         <Contact />
