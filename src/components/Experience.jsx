@@ -55,10 +55,10 @@ const experiences = [
 const Experience = () => {
   return (
     <Box
-      component="section"
       id="experience"
       sx={{
         py: 10,
+        background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9))',
         color: '#f9fafb',
       }}
     >
