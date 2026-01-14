@@ -35,7 +35,7 @@ const skillCategories = {
 
 const Skills = () => {
   return (
-    <Box id="skills" sx={{ py: 8 }}>
+    <Box component="section" id="skills" sx={{ py: 8 }}>
       <Container>
         <Typography variant="h2" sx={{ mb: 4 }}>Skills</Typography>
         <Grid container spacing={4}>

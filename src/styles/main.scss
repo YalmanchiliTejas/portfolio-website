@@ -33,10 +33,7 @@ body {
 
   section {
     padding: 80px 0;
-
-    &:nth-child(even) {
-      background: var(--background-light);
-    }
+    background: var(--background-dark);
   }
 }
 
