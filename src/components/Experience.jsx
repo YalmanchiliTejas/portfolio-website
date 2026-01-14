@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Stack, Paper, Grid } from '@mui/material';
+import { Box, Container, Typography, Stack, Paper, Grid, Avatar, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 import CumminsLogo from '../assets/Cummins.png';
 import TechMahindraLogo from '../assets/TechMahindra.png';
@@ -54,10 +54,21 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <Box id="experience" sx={{ py: 8, bgcolor: 'linear-gradient(135deg, #1f2937, #0f172a)', color: '#f9fafb' }}>
-      <Container>
-        <Typography variant="h2" sx={{ mb: 4, fontWeight: 700, textAlign: 'center' }}>
+    <Box
+      component="section"
+      id="experience"
+      sx={{
+        py: 10,
+        color: '#f9fafb',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Typography variant="h3" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
           Experience
+        </Typography>
+        <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', mb: 6 }}>
+          Recent internships and engineering roles focused on ML systems, platform reliability, and
+          applied product delivery.
         </Typography>
         <Stack spacing={4}>
           {experiences.map((exp, index) => (
@@ -68,33 +79,47 @@ const Experience = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
               sx={{
-                p: 3,
-                bgcolor: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: 2,
+                p: 3.5,
+                background: 'rgba(15, 23, 42, 0.7)',
+                borderRadius: 3,
+                border: '1px solid rgba(148, 163, 184, 0.2)',
+                boxShadow: '0 24px 45px rgba(15, 23, 42, 0.4)',
                 '&:hover': {
                   transform: 'translateY(-5px)',
                   transition: 'transform 0.3s ease',
                 },
               }}
             >
-              <Grid container spacing={2} alignItems="center">
-                <Grid item xs={2}>
-                  <Box
-                    component="img"
+              <Grid container spacing={3} alignItems="center">
+                <Grid item xs={12} md={2}>
+                  <Avatar
                     src={exp.logo}
                     alt={`${exp.company} logo`}
                     sx={{
-                      maxWidth: '100%',
-                      height: 'auto',
+                      width: 72,
+                      height: 72,
+                      background: 'rgba(148, 163, 184, 0.2)',
+                      border: '1px solid rgba(148, 163, 184, 0.35)',
                     }}
                   />
                 </Grid>
-                <Grid item xs={10}>
-                  <Typography variant="h5" sx={{ fontWeight: 600, color: '#1e90ff' }}>
-                    {exp.title}
-                  </Typography>
-                  <Typography sx={{ color: '#87cefa', mb: 2 }}>{exp.company}</Typography>
-                  <Typography sx={{ color: '#b0c4de', mb: 2 }}>{exp.period}</Typography>
+                <Grid item xs={12} md={10}>
+                  <Stack spacing={1}>
+                    <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                      {exp.title}
+                    </Typography>
+                    <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+                      <Typography variant="body1" sx={{ color: '#87cefa', fontWeight: 500 }}>
+                        {exp.company}
+                      </Typography>
+                      <Chip
+                        label={exp.period}
+                        size="small"
+                        variant="outlined"
+                        sx={{ borderColor: 'rgba(148, 163, 184, 0.35)', color: '#e2e8f0' }}
+                      />
+                    </Stack>
+                  </Stack>
                 </Grid>
               </Grid>
               <Box component="ul" sx={{ pl: 2, m: 0 }}>

@@ -37,10 +37,10 @@ const certificationsData = [
 const Education = () => {
   return (
     <Box
+      component="section"
       id="education"
       sx={{
         py: 8,
-        background: 'linear-gradient(135deg, #1f2937, #0f172a)',
         color: '#f9fafb',
       }}
     >

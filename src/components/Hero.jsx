@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import { Box, Typography, Button, Container, Grid, Paper, Stack, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -61,6 +61,51 @@ const Hero = () => {
           Passionate about developing cutting-edge AI solutions and machine learning models. 
           Experienced in deep learning, computer vision, and natural language processing.
         </Typography>
+
+        <Grid container spacing={2} sx={{ mb: 5 }}>
+          {[
+            {
+              title: 'ML Research',
+              description: 'Publishing practical research on multimodal systems and agent alignment.',
+            },
+            {
+              title: 'Software Engineering',
+              description: 'Building production-grade ML platforms and observability tooling.',
+            },
+            {
+              title: 'Applied AI',
+              description: 'Deploying real-time inference pipelines for safety-first products.',
+            },
+          ].map((highlight) => (
+            <Grid item xs={12} md={4} key={highlight.title}>
+              <Paper
+                sx={{
+                  p: 2.5,
+                  height: '100%',
+                  borderRadius: 3,
+                  background: 'rgba(15, 23, 42, 0.6)',
+                  border: '1px solid rgba(148, 163, 184, 0.2)',
+                  boxShadow: '0 20px 35px rgba(15, 23, 42, 0.35)',
+                }}
+              >
+                <Stack spacing={1}>
+                  <Chip
+                    label={highlight.title}
+                    size="small"
+                    sx={{
+                      alignSelf: 'flex-start',
+                      background: 'rgba(124, 58, 237, 0.2)',
+                      color: '#e2e8f0',
+                    }}
+                  />
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {highlight.description}
+                  </Typography>
+                </Stack>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
 
         {/* Action Buttons */}
         <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>

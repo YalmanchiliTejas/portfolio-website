@@ -27,10 +27,10 @@ const Contact = () => {
 
   return (
     <Box
+      component="section"
       id="contact"
       sx={{
         py: 8,
-        bgcolor: 'linear-gradient(135deg, #1f2937, #0f172a)',
         color: '#f9fafb',
       }}
     >
