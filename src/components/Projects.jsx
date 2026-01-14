@@ -36,6 +36,18 @@ const projects = [
     ],
     tech: ['React', 'Python', 'Machine Learning', 'AWS'],
   },
+  {
+  title: 'Agent Relay SDK',
+  description: 'Production observability SDK for tracing agent tool calls, resumable sessions, and LLM usage/spend tracking.',
+  features: [
+    'Automatic tracing of tool inputs/outputs with decorators.',
+    'Resumable agent sessions with budget enforcement and run replay.',
+    'LLM cost tracking with token usage and provider aggregation.',
+    'Cloud-backed storage in MongoDB with export for offline debugging.',
+  ],
+  tech: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'AWS'],
+  websiteLink: 'https://agent-relay-website.vercel.app/',
+}
 ];
 
 const Projects = () => {
@@ -98,7 +110,7 @@ const Projects = () => {
                     </Button>
                   ))}
                 </Box>
-                {/* YouTube Demo Link for Soteria */}
+                {/* Demo Links */}
                 {project.youtubeLink && (
                   <Button
                     variant="contained"
@@ -117,6 +129,26 @@ const Projects = () => {
                     }}
                   >
                     Watch Demo
+                  </Button>
+                )}
+                {project.websiteLink && (
+                  <Button
+                    variant="contained"
+                    size="small"
+                    href={project.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<Link />}
+                    sx={{
+                      mt: 2,
+                      background: 'linear-gradient(90deg, #1e90ff, #4682b4)',
+                      color: '#fff',
+                      '&:hover': {
+                        background: '#4682b4',
+                      },
+                    }}
+                  >
+                    Visit Website
                   </Button>
                 )}
               </Paper>
