@@ -4,18 +4,30 @@ import { Link, FitnessCenter, Hub, Security, School } from '@mui/icons-material'
 import agentTrailLogo from '../assets/agentTrailLogo.png';
 const projects = [
   {
-    title: 'AgentTrail',
+    title: 'Soteria',
+    description:
+      'Soteria is a multi-platform mobile app designed to allow users to rate and review social hangouts based on perceived safety. It includes a heat map functionality to highlight unsafe zones and notify contacts in case of emergencies.',
+    features: [
+      'Integrated Google Maps API for real-time heat maps.',
+      'Implemented SOS notifications to user contacts.',
+      'Developed using Flutter and Firebase.',
+    ],
+    youtubeLink: 'https://www.youtube.com/watch?v=ZrEm0jis-AQ',
+    tech: ['Flutter', 'Firebase', 'Google Maps API'],
+    logoIcon: <Security fontSize="small" />,
+    logoGradient: 'linear-gradient(135deg, #38bdf8, #7c3aed)',
+  },
+  {
+    title: 'UniLeap',
     description:
       'Transaction-aware agent runtime library and monitoring platform for reproducible, observable AI deployments.',
     features: [
       'Built and deployed a runtime library that tracks forward and compensation steps with structured run logging and API keys.',
       'Developed a production web platform using React, FastAPI, and AWS (S3, CloudFront, Elastic Beanstalk) for real-time dashboards and OAuth-secured access.',
     ],
-    tech: ['React', 'FastAPI', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk'],
-    websiteLink: 'https://agent-relay-website.vercel.app/',
-    logoImage: agentTrailLogo,
-    logoIcon: Hub,
-    logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
+    tech: ['Django', 'React.js', 'AWS EC2', 'AWS Amplify', 'LlamaIndex'],
+    logoIcon: <School fontSize="small" />,
+    logoGradient: 'linear-gradient(135deg, #22d3ee, #6366f1)',
   },
   {
     title: 'Fit Check',
@@ -25,8 +37,24 @@ const projects = [
       'Managed full-cycle AI model training and web development, improving page load time and overall site performance.',
     ],
     tech: ['React', 'Python', 'Machine Learning', 'AWS'],
-    logoIcon: FitnessCenter,
+    logoIcon: <FitnessCenter fontSize="small" />,
     logoGradient: 'linear-gradient(135deg, #f97316, #ec4899)',
+  },
+  {
+    title: 'AgentTrail',
+    description:
+      'Production observability SDK and Trail for tracing agent tool calls, idempotent tool calls, compensations and deterministic replays, and LLM usage/spend tracking.',
+    features: [
+      'Automatic tracing of tool inputs/outputs with decorators.',
+      'Resumable agent sessions with budget enforcement and run replay.',
+      'LLM cost tracking with token usage and provider aggregation.',
+      'Cloud-backed storage in MongoDB with export for offline debugging.',
+    ],
+    tech: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'AWS'],
+    websiteLink: 'https://agent-relay-website.vercel.app/',
+    logoImage: agentTrailLogo,
+    logoIcon: <Hub fontSize="small" />,
+    logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
   },
 ];
 
@@ -83,9 +111,7 @@ const Projects = () => {
                       color: '#f8fafc',
                     }}
                   >
-                    {project.logoIcon
-                      ? React.createElement(project.logoIcon, { fontSize: 'small' })
-                      : getInitials(project.title)}
+                    {project.logoIcon || getInitials(project.title)}
                   </Avatar>
                   <Box>
                     <Typography variant="h5" sx={{ fontWeight: 600 }}>
