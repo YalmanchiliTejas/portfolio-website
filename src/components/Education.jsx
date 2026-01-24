@@ -125,6 +125,11 @@ const Education = () => {
                   <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.gpa}
                   </Typography>
+                  {edu.coursework && (
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {edu.coursework}
+                    </Typography>
+                  )}
                 </Box>
               </Paper>
             </Grid>
