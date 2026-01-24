@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Button, Stack, Chip, Avatar } from '@mui/material';
-import { Link, Security, School, FitnessCenter, Hub } from '@mui/icons-material';
+import { Link, FitnessCenter, Hub, Security, School } from '@mui/icons-material';
 import agentTrailLogo from '../assets/agentTrailLogo.png';
 const projects = [
   {
@@ -14,7 +14,7 @@ const projects = [
     ],
     youtubeLink: 'https://www.youtube.com/watch?v=ZrEm0jis-AQ',
     tech: ['Flutter', 'Firebase', 'Google Maps API'],
-    logoIcon: Security,
+    logoIcon: <Security fontSize="small" />,
     logoGradient: 'linear-gradient(135deg, #38bdf8, #7c3aed)',
   },
   {
@@ -27,7 +27,7 @@ const projects = [
       'Implemented RAG-based LlamaIndex chatbot for personalized guidance.',
     ],
     tech: ['Django', 'React.js', 'AWS EC2', 'AWS Amplify', 'LlamaIndex'],
-    logoIcon: School,
+    logoIcon: <School fontSize="small" />,
     logoGradient: 'linear-gradient(135deg, #22d3ee, #6366f1)',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
       'Full-cycle AI model training and web development.',
     ],
     tech: ['React', 'Python', 'Machine Learning', 'AWS'],
-    logoIcon: FitnessCenter,
+    logoIcon: <FitnessCenter fontSize="small" />,
     logoGradient: 'linear-gradient(135deg, #f97316, #ec4899)',
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     tech: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'AWS'],
     websiteLink: 'https://agent-relay-website.vercel.app/',
     logoImage: agentTrailLogo,
-    logoIcon: Hub,
+    logoIcon: <Hub fontSize="small" />,
     logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
   },
 ];
@@ -75,12 +75,11 @@ const Projects = () => {
       id="projects"
       sx={{
         py: 10,
-        color: '#f9fafb',
       }}
     >
       <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 6, textAlign: 'center' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700 }}>
+          <Typography variant="h3" sx={{ fontWeight: 700, color: 'text.primary' }}>
             Projects
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto' }}>
@@ -94,10 +93,10 @@ const Projects = () => {
               <Paper
                 sx={{
                   p: 3.5,
-                  background: 'rgba(15, 23, 42, 0.7)',
-                  borderRadius: 3,
-                  border: '1px solid rgba(148, 163, 184, 0.2)',
-                  boxShadow: '0 28px 55px rgba(15, 23, 42, 0.45)',
+                  background: '#ffffff',
+                  borderRadius: 4,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 28px 55px rgba(31, 41, 55, 0.1)',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 2.5,
@@ -114,9 +113,7 @@ const Projects = () => {
                       color: '#f8fafc',
                     }}
                   >
-                    {project.logoIcon
-                      ? React.createElement(project.logoIcon, { fontSize: 'small' })
-                      : getInitials(project.title)}
+                    {project.logoIcon || getInitials(project.title)}
                   </Avatar>
                   <Box>
                     <Typography variant="h5" sx={{ fontWeight: 600 }}>
@@ -141,7 +138,7 @@ const Projects = () => {
                       label={tech}
                       size="small"
                       variant="outlined"
-                      sx={{ borderColor: 'rgba(148, 163, 184, 0.4)', color: '#e2e8f0' }}
+                      sx={{ borderColor: 'rgba(31, 41, 55, 0.2)', color: 'text.secondary' }}
                     />
                   ))}
                 </Box>
@@ -156,11 +153,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: 'linear-gradient(90deg, #1e90ff, #4682b4)',
+                        background: '#2f5d62',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#4682b4',
+                          background: '#284f53',
                         },
                       }}
                     >
@@ -176,11 +173,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: 'linear-gradient(90deg, #1e90ff, #4682b4)',
+                        background: '#2f5d62',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#4682b4',
+                          background: '#284f53',
                         },
                       }}
                     >

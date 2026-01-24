@@ -26,10 +26,10 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          background: 'rgba(15, 23, 42, 0.9)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: 'none',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          background: 'rgba(255, 255, 255, 0.9)',
+          backdropFilter: 'blur(12px)',
+          boxShadow: '0 12px 30px rgba(31, 41, 55, 0.08)',
+          borderBottom: '1px solid rgba(31, 41, 55, 0.08)',
         }}
       >
         <Toolbar>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 width: 50,
                 borderRadius: '50%',
                 overflow: 'hidden',
-                backgroundColor: '#fff', // Fallback color if image doesn't load
+                backgroundColor: '#f3f4f6', // Fallback color if image doesn't load
               }}
             >
               <img
@@ -51,7 +51,7 @@ const Navbar = () => {
                   height: '100%',
                   width: '100%',
                   objectFit: 'contain',
-                  backgroundColor: '#fff',
+                  backgroundColor: '#f3f4f6',
                 }}
               />
             </Box>
@@ -61,11 +61,11 @@ const Navbar = () => {
               href="/"
               sx={{
                 textDecoration: 'none',
-                color: '#fff', // White by default
+                color: '#1f2937', // Primary text
                 fontWeight: 600,
                 transition: 'color 0.3s ease', // Smooth transition on hover
                 '&:hover': {
-                  color: '#1e90ff', // Metallic blue on hover
+                  color: '#5b7cfa', // Accent on hover
                 },
               }}
             >
@@ -84,11 +84,11 @@ const Navbar = () => {
                 rel={link.label === 'Resume' ? 'noopener noreferrer' : ''}
                 sx={{
                   textDecoration: 'none',
-                  color: '#fff', // White by default
+                  color: '#1f2937', // Primary text
                   fontWeight: 500,
                   transition: 'color 0.3s ease', // Smooth transition on hover
                   '&:hover': {
-                    color: '#1e90ff', // Metallic blue on hover
+                    color: '#5b7cfa', // Accent on hover
                   },
                 }}
               >
@@ -101,10 +101,10 @@ const Navbar = () => {
               href="https://github.com/YalmanchiliTejas"
               target="_blank"
               sx={{
-                color: '#fff', // White by default
+                color: '#1f2937', // Primary text
                 transition: 'color 0.3s ease', // Smooth transition on hover
                 '&:hover': {
-                  color: '#1e90ff', // Metallic blue on hover
+                  color: '#5b7cfa', // Accent on hover
                 },
               }}
             >
@@ -114,10 +114,10 @@ const Navbar = () => {
               href="https://linkedin.com/in/tejasyalamanchili"
               target="_blank"
               sx={{
-                color: '#fff', // White by default
+                color: '#1f2937', // Primary text
                 transition: 'color 0.3s ease', // Smooth transition on hover
                 '&:hover': {
-                  color: '#1e90ff', // Metallic blue on hover
+                  color: '#5b7cfa', // Accent on hover
                 },
               }}
             >
@@ -127,7 +127,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu for Small Screens */}
           <IconButton
-            sx={{ display: { xs: 'block', md: 'none' }, color: '#fff' }}
+            sx={{ display: { xs: 'block', md: 'none' }, color: '#1f2937' }}
             onClick={toggleDrawer}
           >
             <Menu />
@@ -140,14 +140,14 @@ const Navbar = () => {
         <Box
           sx={{
             width: 250,
-            bgcolor: 'background.default',
+            bgcolor: '#f7f5f0',
             height: '100%',
-            color: '#fff',
+            color: '#1f2937',
           }}
         >
           <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="h6">Menu</Typography>
-            <IconButton onClick={toggleDrawer} sx={{ color: '#fff' }}>
+            <IconButton onClick={toggleDrawer} sx={{ color: '#1f2937' }}>
               <Close />
             </IconButton>
           </Box>
@@ -157,10 +157,10 @@ const Navbar = () => {
                 <ListItemText
                   primary={link.label}
                   sx={{
-                    color: '#fff', // White by default
+                    color: '#1f2937', // Primary text
                     transition: 'color 0.3s ease', // Smooth transition on hover
                     '&:hover': {
-                      color: '#1e90ff', // Metallic blue on hover
+                      color: '#5b7cfa', // Accent on hover
                     },
                   }}
                 />
@@ -172,10 +172,10 @@ const Navbar = () => {
                 href="https://github.com/YalmanchiliTejas"
                 target="_blank"
                 sx={{
-                  color: '#fff', // White by default
+                  color: '#1f2937', // Primary text
                   transition: 'color 0.3s ease', // Smooth transition on hover
                   '&:hover': {
-                    color: '#1e90ff', // Metallic blue on hover
+                    color: '#5b7cfa', // Accent on hover
                   },
                 }}
               >
@@ -185,10 +185,10 @@ const Navbar = () => {
                 href="https://linkedin.com/in/tejasyalamanchili"
                 target="_blank"
                 sx={{
-                  color: '#fff', // White by default
+                  color: '#1f2937', // Primary text
                   transition: 'color 0.3s ease', // Smooth transition on hover
                   '&:hover': {
-                    color: '#1e90ff', // Metallic blue on hover
+                    color: '#5b7cfa', // Accent on hover
                   },
                 }}
               >
