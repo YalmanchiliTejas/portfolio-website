@@ -4,59 +4,29 @@ import { Link, FitnessCenter, Hub, Security, School } from '@mui/icons-material'
 import agentTrailLogo from '../assets/agentTrailLogo.png';
 const projects = [
   {
-    title: 'Soteria',
+    title: 'AgentTrail',
     description:
-      'Soteria is a multi-platform mobile app designed to allow users to rate and review social hangouts based on perceived safety. It includes a heat map functionality to highlight unsafe zones and notify contacts in case of emergencies.',
+      'Transaction-aware agent runtime library and monitoring platform for reproducible, observable AI deployments.',
     features: [
-      'Integrated Google Maps API for real-time heat maps.',
-      'Implemented SOS notifications to user contacts.',
-      'Developed using Flutter and Firebase.',
+      'Built and deployed a runtime library that tracks forward and compensation steps with structured run logging and API keys.',
+      'Developed a production web platform using React, FastAPI, and AWS (S3, CloudFront, Elastic Beanstalk) for real-time dashboards and OAuth-secured access.',
     ],
-    youtubeLink: 'https://www.youtube.com/watch?v=ZrEm0jis-AQ',
-    tech: ['Flutter', 'Firebase', 'Google Maps API'],
-    logoIcon: Security,
-    logoGradient: 'linear-gradient(135deg, #38bdf8, #7c3aed)',
-  },
-  {
-    title: 'UniLeap',
-    description:
-      'UniLeap is a personalized mentoring platform designed to assist students with college applications and career guidance. It provides an AI-powered chatbot for seamless query resolution.',
-    features: [
-      'Co-founded platform for college application assistance.',
-      'Built using Django and React.js.',
-      'Implemented RAG-based LlamaIndex chatbot for personalized guidance.',
-    ],
-    tech: ['Django', 'React.js', 'AWS EC2', 'AWS Amplify', 'LlamaIndex'],
-    logoIcon: School,
-    logoGradient: 'linear-gradient(135deg, #22d3ee, #6366f1)',
+    tech: ['React', 'FastAPI', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk'],
+    websiteLink: 'https://agent-relay-website.vercel.app/',
+    logoImage: agentTrailLogo,
+    logoIcon: Hub,
+    logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
   },
   {
     title: 'Fit Check',
     description: 'E-commerce platform with virtual try-on capabilities.',
     features: [
-      'Aggregated apparel from 10+ leading brands.',
-      'Integrated ML models for 40% improved cloth mapping accuracy.',
-      'Full-cycle AI model training and web development.',
+      'Aggregated apparel from 10+ leading brands and launched a virtual try-on feature with ML models to increase cloth mapping accuracy by 40%.',
+      'Managed full-cycle AI model training and web development, improving page load time and overall site performance.',
     ],
     tech: ['React', 'Python', 'Machine Learning', 'AWS'],
     logoIcon: FitnessCenter,
     logoGradient: 'linear-gradient(135deg, #f97316, #ec4899)',
-  },
-  {
-    title: 'AgentTrail',
-    description:
-      'Production observability SDK and Trail for tracing agent tool calls, idempotent tool calls, compensations and deterministic replays, and LLM usage/spend tracking.',
-    features: [
-      'Automatic tracing of tool inputs/outputs with decorators.',
-      'Resumable agent sessions with budget enforcement and run replay.',
-      'LLM cost tracking with token usage and provider aggregation.',
-      'Cloud-backed storage in MongoDB with export for offline debugging.',
-    ],
-    tech: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'AWS'],
-    websiteLink: 'https://agent-relay-website.vercel.app/',
-    logoImage: agentTrailLogo,
-    logoIcon: Hub,
-    logoGradient: 'linear-gradient(135deg, #34d399, #10b981)',
   },
 ];
 
