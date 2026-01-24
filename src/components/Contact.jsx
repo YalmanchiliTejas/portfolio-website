@@ -31,11 +31,10 @@ const Contact = () => {
       id="contact"
       sx={{
         py: 8,
-        color: '#f9fafb',
       }}
     >
       <Container maxWidth="md">
-        <Typography variant="h2" sx={{ mb: 4, fontWeight: 700, textAlign: 'center' }}>
+        <Typography variant="h2" sx={{ mb: 4, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Contact
         </Typography>
         <Grid container spacing={3}>
@@ -47,8 +46,10 @@ const Contact = () => {
                 sx={{
                   p: 3,
                   textAlign: 'center',
-                  bgcolor: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 2,
+                  bgcolor: '#ffffff',
+                  borderRadius: 4,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
                   cursor: 'pointer',
                 }}
                 onClick={() => window.open(item.link, '_blank')}
@@ -60,16 +61,16 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   sx={{
                     mb: 1,
-                    color: '#1e90ff',
+                    color: '#5b7cfa',
                     fontSize: 36,
                   }}
                 >
                   {item.icon}
                 </IconButton>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: '#1e90ff' }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#2f5d62' }}>
                   {item.label}
                 </Typography>
-                <Typography sx={{ color: '#b0c4de' }}>{item.value}</Typography>
+                <Typography sx={{ color: 'text.secondary' }}>{item.value}</Typography>
               </Paper>
             </Grid>
           ))}
