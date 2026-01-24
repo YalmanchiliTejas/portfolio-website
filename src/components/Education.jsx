@@ -6,9 +6,11 @@ const educationData = [
   {
     title: 'Master of Science in Computer Science',
     institution: 'Purdue University, West Lafayette, IN',
-    period: 'Aug 2024 - Dec 2025',
+    period: 'Aug 2024 - May 2026',
     details: 'Specialization: Machine Intelligence, Systems Programming, Software Engineering',
-    gpa: 'GPA: 3.91 / 4.00',
+    gpa: 'GPA: 3.77 / 4.00',
+    coursework:
+      'Relevant Coursework: Compilers, Data Structures and Algorithms, Data Mining and Machine Learning, Intro to Artificial Intelligence, Operating Systems, Database Systems, Reinforcement Learning, Computer Vision, Programming in C',
     logo: PurdueLogo, // Add Purdue logo for education
   },
   {
@@ -16,8 +18,8 @@ const educationData = [
     institution: 'Purdue University, West Lafayette, IN',
     period: 'Aug 2021 - May 2025',
     details: 'Dean’s List (all semesters)',
-    gpa: 'GPA: 3.91 / 4.00',
-    logo: PurdueLogo, // Reuse Purdue logo for bachelor's degree
+    gpa: 'GPA: 3.87 / 4.00',
+    logo: PurdueLogo,
   },
 ];
 
@@ -28,9 +30,20 @@ const certificationsData = [
     date: 'Feb 2024',
   },
   {
-    title: 'Convolutional Networks and Sequence Models',
+    title: 'Convolutional Networks & Sequence Models',
     provider: 'Coursera',
     date: 'Feb 2024',
+  },
+];
+
+const assistantshipData = [
+  {
+    title: 'Graduate Research Assistant',
+    organization: 'Cummins (Machine Learning)',
+  },
+  {
+    title: 'Teaching Assistant',
+    organization: 'CS252 Systems Programming',
   },
 ];
 
@@ -41,12 +54,11 @@ const Education = () => {
       id="education"
       sx={{
         py: 8,
-        color: '#f9fafb',
       }}
     >
       <Container maxWidth="md">
         {/* Education Section */}
-        <Typography variant="h3" sx={{ mb: 4, fontWeight: 700, textAlign: 'center' }}>
+        <Typography variant="h3" sx={{ mb: 4, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Education
         </Typography>
         <Grid container spacing={4}>
@@ -58,8 +70,10 @@ const Education = () => {
                   display: 'flex',
                   gap: 2,
                   alignItems: 'center',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 2,
+                  background: '#ffffff',
+                  borderRadius: 3,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
                 }}
               >
                 {/* Purdue Logo */}
@@ -68,7 +82,7 @@ const Education = () => {
                     height: 60, // Adjust as needed for logo dimensions
                     width: 100, // Adjust width for rectangular shape
                     overflow: 'hidden',
-                    backgroundColor: '#fff', // Fallback color if image doesn't load
+                    backgroundColor: '#f3f4f6', // Fallback color if image doesn't load
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -89,18 +103,23 @@ const Education = () => {
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     {edu.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.institution}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.period}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.details}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.gpa}
                   </Typography>
+                  {edu.coursework && (
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {edu.coursework}
+                    </Typography>
+                  )}
                 </Box>
               </Paper>
             </Grid>
@@ -108,7 +127,7 @@ const Education = () => {
         </Grid>
 
         {/* Certifications Section */}
-        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center' }}>
+        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Certifications
         </Typography>
         <Grid container spacing={4}>
@@ -120,19 +139,52 @@ const Education = () => {
                   display: 'flex',
                   gap: 2,
                   alignItems: 'center',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 2,
+                  background: '#ffffff',
+                  borderRadius: 3,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
                 }}
               >
                 <Box>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     {cert.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {cert.provider}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {cert.date}
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
+          Teaching & Assistantship
+        </Typography>
+        <Grid container spacing={4}>
+          {assistantshipData.map((role, index) => (
+            <Grid item xs={12} md={6} key={index}>
+              <Paper
+                sx={{
+                  p: 3,
+                  display: 'flex',
+                  gap: 2,
+                  alignItems: 'center',
+                  background: '#ffffff',
+                  borderRadius: 3,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
+                }}
+              >
+                <Box>
+                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                    {role.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {role.organization}
                   </Typography>
                 </Box>
               </Paper>

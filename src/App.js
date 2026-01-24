@@ -11,42 +11,47 @@ import './styles/main.scss';
 import Education from './components/Education';
 import Papers from './components/Papers';
 
-const darkTheme = createTheme({
+const canvasTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#7c3aed',
+      main: '#2f5d62',
     },
     secondary: {
-      main: '#4f46e5',
+      main: '#5b7cfa',
     },
     background: {
-      default: '#0f172a',
-      paper: '#1f2937',
+      default: '#f7f5f0',
+      paper: '#ffffff',
     },
     text: {
-      primary: '#f9fafb',
-      secondary: '#9ca3af',
+      primary: '#1f2937',
+      secondary: '#6b7280',
     },
   },
   typography: {
-    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Manrope", "Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontSize: '4rem',
+      fontSize: '3.75rem',
       fontWeight: 700,
-      lineHeight: 1.2,
+      lineHeight: 1.1,
+      letterSpacing: '-0.02em',
     },
     h2: {
       fontSize: '2.5rem',
       fontWeight: 600,
       marginBottom: '2rem',
+      letterSpacing: '-0.01em',
     },
+  },
+  shape: {
+    borderRadius: 16,
   },
 });
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={canvasTheme}>
       <CssBaseline />
       <div className="app">
         <Navbar />
