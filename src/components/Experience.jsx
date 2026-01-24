@@ -107,6 +107,11 @@ const Experience = () => {
                       height: 72,
                       background: '#f3f4f6',
                       border: '1px solid rgba(31, 41, 55, 0.08)',
+                      '& img': {
+                        objectFit: 'contain',
+                        width: '80%',
+                        height: '80%',
+                      },
                     }}
                   />
                 </Grid>

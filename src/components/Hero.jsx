@@ -100,16 +100,19 @@ const Hero = () => {
             <Grid container spacing={2}>
               {[
                 {
-                  title: 'ML Research',
-                  description: 'Focused on multimodal systems, safety, and evaluation.',
+                  title: 'Graduate Research',
+                  description:
+                    'Building predictive-maintenance AI pipelines with real equipment data for Purdue Data Mine–Cummins.',
                 },
                 {
-                  title: 'Engineering',
-                  description: 'Designing calm, stable infrastructure for AI teams.',
+                  title: 'Full-stack Delivery',
+                  description:
+                    'Shipping production web platforms with React, FastAPI, and cloud infrastructure for real-time dashboards.',
                 },
                 {
-                  title: 'Applied AI',
-                  description: 'Deploying real-time inference with thoughtful UX.',
+                  title: 'Applied ML',
+                  description:
+                    'Deploying RAG-driven assistants and ML systems to improve reliability and developer productivity.',
                 },
               ].map((highlight) => (
                 <Grid item xs={12} sm={6} key={highlight.title}>
@@ -146,11 +149,11 @@ const Hero = () => {
                 >
                   <Stack spacing={1}>
                     <Typography variant="subtitle2" sx={{ color: '#2f5d62', fontWeight: 600 }}>
-                      Current focus
+                      Focus areas
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      Building trustworthy AI products, human-centered tooling, and secure data
-                      pipelines.
+                      Predictive maintenance, ML observability, and scalable full-stack product
+                      engineering.
                     </Typography>
                   </Stack>
                 </Paper>

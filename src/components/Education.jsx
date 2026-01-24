@@ -9,8 +9,6 @@ const educationData = [
     period: 'Aug 2024 - May 2026',
     details: 'Specialization: Machine Intelligence, Systems Programming, Software Engineering',
     gpa: 'GPA: 3.77 / 4.00',
-    coursework:
-      'Relevant Coursework: Compilers, Data Structures and Algorithms, Data Mining and Machine Learning, Intro to Artificial Intelligence, Operating Systems, Database Systems, Reinforcement Learning, Computer Vision, Programming in C',
     logo: PurdueLogo, // Add Purdue logo for education
   },
   {
@@ -21,6 +19,18 @@ const educationData = [
     gpa: 'GPA: 3.87 / 4.00',
     logo: PurdueLogo,
   },
+];
+
+const relevantCoursework = [
+  'Compilers',
+  'Data Structures and Algorithms',
+  'Data Mining and Machine Learning',
+  'Intro to Artificial Intelligence',
+  'Operating Systems',
+  'Database Systems',
+  'Reinforcement Learning',
+  'Computer Vision',
+  'Programming in C',
 ];
 
 const certificationsData = [
@@ -121,6 +131,30 @@ const Education = () => {
                     </Typography>
                   )}
                 </Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
+          Relevant Coursework
+        </Typography>
+        <Grid container spacing={3}>
+          {relevantCoursework.map((course) => (
+            <Grid item xs={12} sm={6} md={4} key={course}>
+              <Paper
+                sx={{
+                  p: 2,
+                  textAlign: 'center',
+                  background: '#ffffff',
+                  borderRadius: 3,
+                  border: '1px solid rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 18px 32px rgba(31, 41, 55, 0.08)',
+                }}
+              >
+                <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 600 }}>
+                  {course}
+                </Typography>
               </Paper>
             </Grid>
           ))}

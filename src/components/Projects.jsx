@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Button, Stack, Chip, Avatar } from '@mui/material';
-import { Link, FitnessCenter, Hub } from '@mui/icons-material';
+import { Link, FitnessCenter, Hub, Security, School } from '@mui/icons-material';
 import agentTrailLogo from '../assets/agentTrailLogo.png';
 const projects = [
   {
