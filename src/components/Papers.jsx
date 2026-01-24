@@ -18,6 +18,7 @@ const papers = [
   title: 'Reimplementing PyTorch Cycle GANs for Art Style to Art Style Conversion',
   authors: 'Tejas Yalamanchili, Shrinivas Venkatesan',
   year: '2025',
+  venue: 'Technical Report',
   abstract: `Cycle GAN in Pytorch specifically for art-style translation, constricting the dataset to paintings across multiple styles and evaluating photo to art and art to art conversions within this focused domain. In addition to reproducing the original objective from the paper (LSGAN with cycle and identity losses), we will explore replacing the LSGAN adversarial component with alternative formulations such as hinge loss, while also incorporating additional regularization terms including perceptual content loss (LPIPS/VGG), Gram-matrix style loss, and discriminator feature matching loss. Our goal is to evaluate how this modified objective influences style fidelity, realism, and content preservation in the translated images`,
   topics: ['CVD', 'GANs'],
   pdf: '/CS593_project_final_report.pdf'
@@ -35,7 +36,7 @@ const Papers = () => {
     >
       <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 6, textAlign: 'center' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700 }}>
+          <Typography variant="h3" sx={{ fontWeight: 700, color: 'text.primary' }}>
             Papers & Publications
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto' }}>
@@ -48,10 +49,10 @@ const Papers = () => {
             <Grid item xs={12}>
               <Card
                 sx={{
-                  background: 'rgba(15, 23, 42, 0.7)',
-                  border: '1px dashed rgba(148, 163, 184, 0.35)',
-                  borderRadius: 3,
-                  boxShadow: '0 24px 45px rgba(15, 23, 42, 0.4)',
+                  background: '#ffffff',
+                  border: '1px dashed rgba(31, 41, 55, 0.25)',
+                  borderRadius: 4,
+                  boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
                 }}
               >
                 <CardContent>
@@ -76,10 +77,10 @@ const Papers = () => {
                 <Card
                   sx={{
                     height: '100%',
-                    background: 'rgba(15, 23, 42, 0.7)',
-                    border: '1px solid rgba(148, 163, 184, 0.2)',
-                    borderRadius: 3,
-                    boxShadow: '0 24px 45px rgba(15, 23, 42, 0.4)',
+                    background: '#ffffff',
+                    border: '1px solid rgba(31, 41, 55, 0.08)',
+                    borderRadius: 4,
+                    boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
                   }}
                 >
                   <CardContent sx={{ pb: 2 }}>
@@ -111,7 +112,8 @@ const Papers = () => {
                       startIcon={<PictureAsPdf />}
                       endIcon={<ArrowOutward />}
                       sx={{
-                        background: 'linear-gradient(90deg, #7c3aed, #4f46e5)',
+                        background: '#2f5d62',
+                        '&:hover': { background: '#284f53' },
                         textTransform: 'none',
                       }}
                     >

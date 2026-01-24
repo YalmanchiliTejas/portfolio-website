@@ -1,13 +1,14 @@
 @use "sass:color";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #7c3aed;
-  --secondary-color: #4f46e5;
-  --background-dark: #0f172a;
-  --background-light: rgba(124, 58, 237, 0.05);
-  --text-light: #f9fafb;
-  --text-secondary: #9ca3af;
+  --primary-color: #2f5d62;
+  --secondary-color: #5b7cfa;
+  --background-base: #f7f5f0;
+  --background-surface: #ffffff;
+  --background-muted: #efede7;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
   --transition-duration: 0.3s;
 }
 
@@ -22,18 +23,19 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--background-dark);
-  color: var(--text-light);
+  font-family: 'Manrope', sans-serif;
+  background: var(--background-base);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
 .app {
   min-height: 100vh;
+  background: linear-gradient(180deg, rgba(247, 245, 240, 0.9) 0%, rgba(239, 237, 231, 0.9) 100%);
 
   section {
     padding: 80px 0;
-    background: var(--background-dark);
+    background: transparent;
   }
 }
 
@@ -65,7 +67,7 @@ body {
     color: var(--primary-color);
 
     &:hover {
-      background: var(--background-light);
+      background: rgba(47, 93, 98, 0.1);
     }
 
     &:focus {
@@ -85,7 +87,7 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 
   &:hover {
