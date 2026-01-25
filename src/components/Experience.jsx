@@ -8,24 +8,32 @@ import AUUGLogo from '../assets/AUUG.png';
 
 const experiences = [
   {
-    title: "Software Engineer Intern",
+    title: "Graduate Research Assistant",
     company: "Cummins",
-    period: "May 2024 - Present",
+    period: "Aug 2025 – Present",
     points: [
-      "Developed a robust engineer monitoring interface using Spring Boot, integrating 5 new features like real-time tracking.",
-      "Reduced issue detection and resolution time by boosting system reliability and uptime.",
-      "Deployed RAG and LlamaIndex-based chatbots for technician assistance, improving troubleshooting processes.",
+      "Lead a collaborative Purdue Data Mine–Cummins project to build predictive-maintenance AI pipelines on real equipment data, from feature engineering and model training to validation on real failure cases.",
+      "Make models production-ready by profiling data pipelines and tuning training/inference configurations on Linux and GPU-backed environments to improve reliability and time-to-insight.",
     ],
     logo: CumminsLogo,
   },
   {
     title: "Software Engineer Intern",
+    company: "Cummins",
+    period: "May 2024 - Present",
+    points: [
+      "Developed a robust engineer monitoring interface using Spring Boot, integrating 5 new features like real-time tracking; reduced issue detection and resolution time by boosting system reliability and uptime.",
+      "Deployed RAG and LlamaIndex-based chatbots for technician assistance, improving troubleshooting processes through guided repair steps.",
+    ],
+    logo: CumminsLogo,
+  },
+  {
+    title: "Machine Learning Intern",
     company: "Tech Mahindra",
     period: "May 2023 - Aug 2023",
     points: [
-      "Leveraged CODEBERT to consolidate and categorize similar functions within Nissan's automotive codebase.",
-      "Increased developer productivity by 40% through semantic code search implementation.",
-      "Constructed adaptable RAG-based chatbot, reducing search query resolution time by 25%.",
+      "Leveraged CODEBERT to consolidate and categorize similar functions within Nissan’s automotive codebase into clusters, increasing overall developer productivity by 40% by developing a semantic code search to navigate through organized code clusters.",
+      "Constructed a highly adaptable chatbot using RAG, enabling effortless customization for enterprise search by empowering the chatbot to deliver context-aware responses, reducing search query resolution time by 25%.",
     ],
     logo: TechMahindraLogo,
   },
@@ -34,8 +42,8 @@ const experiences = [
     company: "Providence Global",
     period: "Jun 2022 - Aug 2022",
     points: [
-      "Engineered web API using .Net Core for Azure cloud migration, reducing deployment time by 30%.",
-      "Optimized SQL database through normalization and indexing, reducing query time from 30s to 4s.",
+      "Engineered a web API using .Net Core to facilitate seamless migration of keys and settings to Azure cloud and Azure App Configuration, achieving a 30% reduction in deployment time through this strategic migration.",
+      "Optimized SQL database for client records by implementing data normalization and indexing, reducing query time from 30 sec to 4 sec and improving overall database performance.",
     ],
     logo: ProvidenceLogo,
   },
@@ -44,9 +52,9 @@ const experiences = [
     company: "AUUG",
     period: "May 2022 - Jun 2022",
     points: [
-      "Spearheaded development of C# library for musical information streaming.",
-      "Implemented O2 communication protocol for efficient data transmission.",
-      "Achieved 15% latency reduction improving streaming service responsiveness.",
+      "Spearheaded the development of a C# library to enable seamless streaming of musical information across different devices.",
+      "Harnessed the O2 communication protocol, ensuring efficient data transmission and enhancing user experience.",
+      "Optimized application performance, resulting in a 15% reduction in latency and improved streaming responsiveness.",
     ],
     logo: AUUGLogo,
   },
@@ -58,12 +66,11 @@ const Experience = () => {
       id="experience"
       sx={{
         py: 10,
-        background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9))',
-        color: '#f9fafb',
+        background: 'transparent',
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h3" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
+        <Typography variant="h3" sx={{ mb: 2, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Experience
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', mb: 6 }}>
@@ -80,10 +87,10 @@ const Experience = () => {
               key={index}
               sx={{
                 p: 3.5,
-                background: 'rgba(15, 23, 42, 0.7)',
-                borderRadius: 3,
-                border: '1px solid rgba(148, 163, 184, 0.2)',
-                boxShadow: '0 24px 45px rgba(15, 23, 42, 0.4)',
+                background: '#ffffff',
+                borderRadius: 4,
+                border: '1px solid rgba(31, 41, 55, 0.08)',
+                boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
                 '&:hover': {
                   transform: 'translateY(-5px)',
                   transition: 'transform 0.3s ease',
@@ -98,8 +105,13 @@ const Experience = () => {
                     sx={{
                       width: 72,
                       height: 72,
-                      background: 'rgba(148, 163, 184, 0.2)',
-                      border: '1px solid rgba(148, 163, 184, 0.35)',
+                      background: '#f3f4f6',
+                      border: '1px solid rgba(31, 41, 55, 0.08)',
+                      '& img': {
+                        objectFit: 'contain',
+                        width: '80%',
+                        height: '80%',
+                      },
                     }}
                   />
                 </Grid>
@@ -109,14 +121,14 @@ const Experience = () => {
                       {exp.title}
                     </Typography>
                     <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
-                      <Typography variant="body1" sx={{ color: '#87cefa', fontWeight: 500 }}>
+                      <Typography variant="body1" sx={{ color: '#5b7cfa', fontWeight: 500 }}>
                         {exp.company}
                       </Typography>
                       <Chip
                         label={exp.period}
                         size="small"
                         variant="outlined"
-                        sx={{ borderColor: 'rgba(148, 163, 184, 0.35)', color: '#e2e8f0' }}
+                        sx={{ borderColor: 'rgba(31, 41, 55, 0.2)', color: 'text.secondary' }}
                       />
                     </Stack>
                   </Stack>
@@ -129,8 +141,8 @@ const Experience = () => {
                     key={i}
                     sx={{
                       mb: 1,
-                      color: '#f9fafb',
-                      '&::marker': { color: '#1e90ff' },
+                      color: 'text.secondary',
+                      '&::marker': { color: '#5b7cfa' },
                     }}
                   >
                     {point}
