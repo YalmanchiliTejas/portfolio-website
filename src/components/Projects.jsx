@@ -20,11 +20,10 @@ const projects = [
   {
     title: 'UniLeap',
     description:
-      'UniLeap is a personalized mentoring platform designed to assist students with college applications and career guidance. It provides an AI-powered chatbot for seamless query resolution.',
+      'Transaction-aware agent runtime library and monitoring platform for reproducible, observable AI deployments.',
     features: [
-      'Co-founded platform for college application assistance.',
-      'Built using Django and React.js.',
-      'Implemented RAG-based LlamaIndex chatbot for personalized guidance.',
+      'Built and deployed a runtime library that tracks forward and compensation steps with structured run logging and API keys.',
+      'Developed a production web platform using React, FastAPI, and AWS (S3, CloudFront, Elastic Beanstalk) for real-time dashboards and OAuth-secured access.',
     ],
     tech: ['Django', 'React.js', 'AWS EC2', 'AWS Amplify', 'LlamaIndex'],
     logoIcon: <School fontSize="small" />,
@@ -34,9 +33,8 @@ const projects = [
     title: 'Fit Check',
     description: 'E-commerce platform with virtual try-on capabilities.',
     features: [
-      'Aggregated apparel from 10+ leading brands.',
-      'Integrated ML models for 40% improved cloth mapping accuracy.',
-      'Full-cycle AI model training and web development.',
+      'Aggregated apparel from 10+ leading brands and launched a virtual try-on feature with ML models to increase cloth mapping accuracy by 40%.',
+      'Managed full-cycle AI model training and web development, improving page load time and overall site performance.',
     ],
     tech: ['React', 'Python', 'Machine Learning', 'AWS'],
     logoIcon: <FitnessCenter fontSize="small" />,
