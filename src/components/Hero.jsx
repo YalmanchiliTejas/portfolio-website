@@ -33,7 +33,7 @@ const Hero = () => {
           <Grid item xs={12} md={6}>
             <Stack spacing={3}>
               <Chip
-                label="Available for collaborations · 2025"
+                label="Looking for full-time opportunities"
                 sx={{
                   alignSelf: 'flex-start',
                   bgcolor: 'rgba(47, 93, 98, 0.12)',
