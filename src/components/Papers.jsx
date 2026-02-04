@@ -39,7 +39,7 @@ const Papers = () => {
           <Typography variant="h3" sx={{ fontWeight: 700, color: 'text.primary' }}>
             Papers & Publications
           </Typography>
-          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto' }}>
+          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto', textAlign: 'center' }}>
             Technical papers I have worked on during my Masters Degree
           </Typography>
         </Stack>
