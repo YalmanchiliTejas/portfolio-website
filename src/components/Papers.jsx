@@ -40,8 +40,7 @@ const Papers = () => {
             Papers & Publications
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto' }}>
-            Peer-reviewed work and technical reports focused on applied ML systems, agent tooling, and
-            safety-first AI products.
+            Technical papers I have worked on during my Masters Degree
           </Typography>
         </Stack>
         <Grid container spacing={4}>
