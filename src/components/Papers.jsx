@@ -35,8 +35,11 @@ const Papers = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Stack spacing={2} sx={{ mb: 6, textAlign: 'center' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700, color: 'text.primary' }}>
+        <Stack spacing={2} sx={{ mb: 6 }}>
+          <Typography
+            variant="h3"
+            sx={{ fontWeight: 700, color: 'text.primary', textAlign: 'center' }}
+          >
             Papers & Publications
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto', textAlign: 'center' }}>
