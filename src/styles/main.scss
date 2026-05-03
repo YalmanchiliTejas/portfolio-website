@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  --primary-color: #17324d;
-  --secondary-color: #d97706;
-  --background-base: #f4efe8;
+  --primary-color: #12324a;
+  --secondary-color: #b76e2b;
+  --background-base: #f6f1e8;
   --background-surface: #ffffff;
-  --background-muted: #ebe2d5;
-  --text-primary: #102033;
-  --text-secondary: #5f6c7b;
+  --background-muted: #ede4d6;
+  --text-primary: #142738;
+  --text-secondary: #62707d;
   --transition-duration: 0.3s;
 }
 
@@ -25,9 +25,9 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(217, 119, 6, 0.08), transparent 28%),
-    radial-gradient(circle at top right, rgba(23, 50, 77, 0.12), transparent 32%),
-    linear-gradient(180deg, #f8f3eb 0%, #f1ebe2 100%);
+    radial-gradient(circle at top left, rgba(183, 110, 43, 0.1), transparent 30%),
+    radial-gradient(circle at top right, rgba(18, 50, 74, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbf7f1 0%, #f2eadf 100%);
   color: var(--text-primary);
   line-height: 1.6;
 }
@@ -35,8 +35,8 @@ body {
 .app {
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0)),
-    linear-gradient(180deg, rgba(248, 243, 235, 0.9) 0%, rgba(241, 235, 226, 0.92) 100%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.08)),
+    linear-gradient(180deg, rgba(251, 247, 241, 0.94) 0%, rgba(242, 234, 223, 0.96) 100%);
 
   section {
     padding: 88px 0;
@@ -72,7 +72,7 @@ body {
     color: var(--primary-color);
 
     &:hover {
-      background: rgba(47, 93, 98, 0.1);
+      background: rgba(18, 50, 74, 0.08);
     }
 
     &:focus {

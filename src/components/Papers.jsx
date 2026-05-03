@@ -42,7 +42,10 @@ const Papers = () => {
           >
             Papers & Publications
           </Typography>
-          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto',}}>
+          <Typography
+            variant="body1"
+            sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto', textAlign: 'center' }}
+          >
             Technical work from graduate coursework and research projects.
           </Typography>
         </Stack>

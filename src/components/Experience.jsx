@@ -74,7 +74,7 @@ const Experience = () => {
         <Typography variant="h3" sx={{ mb: 2, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Experience
         </Typography>
-        <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', mb: 6 }}>
+        <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', mb: 6, maxWidth: 720, mx: 'auto' }}>
           Roles aligned with the current resume, spanning production software engineering, applied ML,
           and research-driven systems work.
         </Typography>
