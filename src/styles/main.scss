@@ -1,14 +1,14 @@
 @use "sass:color";
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  --primary-color: #2f5d62;
-  --secondary-color: #5b7cfa;
-  --background-base: #f7f5f0;
+  --primary-color: #17324d;
+  --secondary-color: #d97706;
+  --background-base: #f4efe8;
   --background-surface: #ffffff;
-  --background-muted: #efede7;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
+  --background-muted: #ebe2d5;
+  --text-primary: #102033;
+  --text-secondary: #5f6c7b;
   --transition-duration: 0.3s;
 }
 
@@ -24,17 +24,22 @@ html {
 
 body {
   font-family: 'Manrope', sans-serif;
-  background: var(--background-base);
+  background:
+    radial-gradient(circle at top left, rgba(217, 119, 6, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(23, 50, 77, 0.12), transparent 32%),
+    linear-gradient(180deg, #f8f3eb 0%, #f1ebe2 100%);
   color: var(--text-primary);
   line-height: 1.6;
 }
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(247, 245, 240, 0.9) 0%, rgba(239, 237, 231, 0.9) 100%);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(248, 243, 235, 0.9) 0%, rgba(241, 235, 226, 0.92) 100%);
 
   section {
-    padding: 80px 0;
+    padding: 88px 0;
     background: transparent;
   }
 }
@@ -80,6 +85,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 p {

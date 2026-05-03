@@ -42,8 +42,8 @@ const Papers = () => {
           >
             Papers & Publications
           </Typography>
-          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto', textAlign: 'center' }}>
-            Technical papers I have worked on during my Masters Degree
+          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 720, mx: 'auto',}}>
+            Technical work from graduate coursework and research projects.
           </Typography>
         </Stack>
         <Grid container spacing={4}>
@@ -52,9 +52,9 @@ const Papers = () => {
               <Card
                 sx={{
                   background: '#ffffff',
-                  border: '1px dashed rgba(31, 41, 55, 0.25)',
+                  border: '1px dashed rgba(16, 32, 51, 0.25)',
                   borderRadius: 4,
-                  boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
+                  boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
                 }}
               >
                 <CardContent>
@@ -80,15 +80,15 @@ const Papers = () => {
                   sx={{
                     height: '100%',
                     background: '#ffffff',
-                    border: '1px solid rgba(31, 41, 55, 0.08)',
+                    border: '1px solid rgba(16, 32, 51, 0.08)',
                     borderRadius: 4,
-                    boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
+                    boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
                   }}
                 >
                   <CardContent sx={{ pb: 2 }}>
                     <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
-                      <Chip label={paper.venue} size="small" color="secondary" />
-                      <Chip label={paper.year} size="small" variant="outlined" />
+                      <Chip label={paper.venue} size="small" sx={{ bgcolor: 'rgba(217, 119, 6, 0.1)', color: '#9a580d' }} />
+                      <Chip label={paper.year} size="small" variant="outlined" sx={{ borderColor: 'rgba(16, 32, 51, 0.18)' }} />
                     </Stack>
                     <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
                       {paper.title}
@@ -114,8 +114,8 @@ const Papers = () => {
                       startIcon={<PictureAsPdf />}
                       endIcon={<ArrowOutward />}
                       sx={{
-                        background: '#2f5d62',
-                        '&:hover': { background: '#284f53' },
+                        background: '#17324d',
+                        '&:hover': { background: '#10263c' },
                         textTransform: 'none',
                       }}
                     >

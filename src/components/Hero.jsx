@@ -2,6 +2,24 @@ import React from 'react';
 import { Box, Typography, Button, Container, Grid, Paper, Stack, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 
+const highlights = [
+  {
+    title: 'Graduate Research',
+    description:
+      'Building predictive-maintenance AI pipelines with real equipment data for the Purdue Data Mine x Cummins collaboration.',
+  },
+  {
+    title: 'Full-stack Delivery',
+    description:
+      'Shipping production web platforms and internal tools with React, Spring Boot, FastAPI, Docker, and Kubernetes.',
+  },
+  {
+    title: 'Applied ML',
+    description:
+      'Deploying RAG-driven assistants, code intelligence, and model-backed workflows that improve reliability and productivity.',
+  },
+];
+
 const Hero = () => {
   return (
     <Box
@@ -24,7 +42,7 @@ const Hero = () => {
           position: 'absolute',
           inset: 0,
           background:
-            'radial-gradient(circle at top, rgba(91, 124, 250, 0.18), transparent 55%), radial-gradient(circle at 20% 20%, rgba(47, 93, 98, 0.2), transparent 45%)',
+            'radial-gradient(circle at top, rgba(217, 119, 6, 0.18), transparent 48%), radial-gradient(circle at 20% 20%, rgba(23, 50, 77, 0.18), transparent 42%)',
           zIndex: 0,
         }}
       />
@@ -33,14 +51,20 @@ const Hero = () => {
           <Grid item xs={12} md={6}>
             <Stack spacing={3}>
               <Chip
-                label="Looking for full-time opportunities"
+                label="M.S. Computer Science at Purdue"
                 sx={{
                   alignSelf: 'flex-start',
-                  bgcolor: 'rgba(47, 93, 98, 0.12)',
-                  color: '#2f5d62',
+                  bgcolor: 'rgba(217, 119, 6, 0.12)',
+                  color: '#b45309',
                   fontWeight: 600,
                 }}
               />
+              <Typography
+                variant="overline"
+                sx={{ letterSpacing: '0.22em', color: 'text.secondary', fontWeight: 700 }}
+              >
+                Tejas Yalamanchili
+              </Typography>
               <Typography
                 component={motion.h1}
                 initial={{ y: -20 }}
@@ -50,14 +74,28 @@ const Hero = () => {
                 sx={{
                   fontSize: { xs: '2.75rem', md: '3.75rem' },
                   color: 'text.primary',
+                  maxWidth: 680,
                 }}
               >
-                Full-stack software engineer and AI engineer building dependable, production-ready systems.
+                Building AI systems and full-stack products that hold up in production.
               </Typography>
               <Typography variant="h6" sx={{ color: 'text.secondary' }}>
-                I combine end-to-end product engineering with applied ML to deliver scalable platforms,
-                intelligent user experiences, and trustworthy AI pipelines.
+                Software engineer and ML engineer focused on predictive maintenance, agent
+                observability, and cloud-backed platforms with reliable end-to-end delivery.
               </Typography>
+              <Stack direction="row" spacing={1.25} flexWrap="wrap" useFlexGap>
+                {['Java', 'Python', 'Go', 'React', 'Spring Boot', 'PyTorch'].map((item) => (
+                  <Chip
+                    key={item}
+                    label={item}
+                    sx={{
+                      bgcolor: 'rgba(255, 255, 255, 0.7)',
+                      border: '1px solid rgba(16, 32, 51, 0.08)',
+                      color: 'text.primary',
+                    }}
+                  />
+                ))}
+              </Stack>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <Button
                   component={motion.a}
@@ -66,11 +104,11 @@ const Hero = () => {
                   variant="contained"
                   size="large"
                   sx={{
-                    bgcolor: '#2f5d62',
+                    bgcolor: '#17324d',
                     color: '#fff',
                     textTransform: 'none',
-                    boxShadow: '0 10px 24px rgba(47, 93, 98, 0.25)',
-                    '&:hover': { bgcolor: '#284f53' },
+                    boxShadow: '0 12px 24px rgba(23, 50, 77, 0.22)',
+                    '&:hover': { bgcolor: '#10263c' },
                   }}
                 >
                   Explore projects
@@ -78,56 +116,42 @@ const Hero = () => {
                 <Button
                   component={motion.a}
                   whileHover={{ scale: 1.03 }}
-                  href="#contact"
+                  href="/Tejas_Yalamanchili.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="outlined"
                   size="large"
                   sx={{
-                    color: '#2f5d62',
-                    borderColor: '#2f5d62',
+                    color: '#17324d',
+                    borderColor: 'rgba(23, 50, 77, 0.25)',
                     textTransform: 'none',
                     '&:hover': {
-                      bgcolor: 'rgba(47, 93, 98, 0.08)',
-                      borderColor: '#2f5d62',
+                      bgcolor: 'rgba(23, 50, 77, 0.06)',
+                      borderColor: '#17324d',
                     },
                   }}
                 >
-                  Let’s connect
+                  Open resume
                 </Button>
               </Stack>
             </Stack>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid container spacing={2}>
-              {[
-                {
-                  title: 'Graduate Research',
-                  description:
-                    'Building predictive-maintenance AI pipelines with real equipment data for Purdue Data Mine–Cummins.',
-                },
-                {
-                  title: 'Full-stack Delivery',
-                  description:
-                    'Shipping production web platforms with React, FastAPI, and cloud infrastructure for real-time dashboards.',
-                },
-                {
-                  title: 'Applied ML',
-                  description:
-                    'Deploying RAG-driven assistants and ML systems to improve reliability and developer productivity.',
-                },
-              ].map((highlight) => (
+              {highlights.map((highlight) => (
                 <Grid item xs={12} sm={6} key={highlight.title}>
                   <Paper
                     sx={{
-                      p: 2.5,
+                      p: 2.75,
                       height: '100%',
                       borderRadius: 4,
                       background: 'rgba(255, 255, 255, 0.86)',
-                      border: '1px solid rgba(31, 41, 55, 0.08)',
-                      boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
+                      border: '1px solid rgba(16, 32, 51, 0.08)',
+                      boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
                     }}
                   >
                     <Stack spacing={1}>
-                      <Typography variant="subtitle2" sx={{ color: '#5b7cfa', fontWeight: 600 }}>
+                      <Typography variant="subtitle2" sx={{ color: '#d97706', fontWeight: 700 }}>
                         {highlight.title}
                       </Typography>
                       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -140,20 +164,22 @@ const Hero = () => {
               <Grid item xs={12} sm={6}>
                 <Paper
                   sx={{
-                    p: 2.5,
+                    p: 2.75,
                     height: '100%',
                     borderRadius: 4,
-                    background: '#ffffff',
-                    border: '1px dashed rgba(31, 41, 55, 0.15)',
+                    background: 'linear-gradient(135deg, rgba(23, 50, 77, 0.96), rgba(38, 75, 111, 0.92))',
+                    color: '#f8fafc',
+                    border: '1px solid rgba(16, 32, 51, 0.12)',
+                    boxShadow: '0 24px 45px rgba(16, 32, 51, 0.15)',
                   }}
                 >
-                  <Stack spacing={1}>
-                    <Typography variant="subtitle2" sx={{ color: '#2f5d62', fontWeight: 600 }}>
-                      Focus areas
+                  <Stack spacing={1.25}>
+                    <Typography variant="subtitle2" sx={{ color: '#fdba74', fontWeight: 700 }}>
+                      Current focus
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      Predictive maintenance, ML observability, and scalable full-stack product
-                      engineering.
+                    <Typography variant="body2" sx={{ color: 'rgba(248, 250, 252, 0.86)' }}>
+                      Production AI tooling, predictive maintenance systems, and agent runtime
+                      infrastructure with observability built in from day one.
                     </Typography>
                   </Stack>
                 </Paper>

@@ -48,8 +48,8 @@ const Contact = () => {
                   textAlign: 'center',
                   bgcolor: '#ffffff',
                   borderRadius: 4,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 24px 45px rgba(31, 41, 55, 0.08)',
+                  border: '1px solid rgba(16, 32, 51, 0.08)',
+                  boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
                   cursor: 'pointer',
                 }}
                 onClick={() => window.open(item.link, '_blank')}
@@ -61,13 +61,13 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   sx={{
                     mb: 1,
-                    color: '#5b7cfa',
+                    color: '#d97706',
                     fontSize: 36,
                   }}
                 >
                   {item.icon}
                 </IconButton>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: '#2f5d62' }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#17324d' }}>
                   {item.label}
                 </Typography>
                 <Typography sx={{ color: 'text.secondary' }}>{item.value}</Typography>

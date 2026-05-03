@@ -1,59 +1,25 @@
 import React from 'react';
-import { Box, Typography, Container, Grid, Paper } from '@mui/material';
-import PurdueLogo from '../assets/PurdueLogo.png'; // Import Purdue Logo
+import { Box, Typography, Container, Grid, Paper, Chip, Stack } from '@mui/material';
+import PurdueLogo from '../assets/PurdueLogo.png';
 
 const educationData = [
   {
     title: 'Master of Science in Computer Science',
     institution: 'Purdue University, West Lafayette, IN',
     period: 'Aug 2024 - May 2026',
-    details: 'Specialization: Machine Intelligence, Systems Programming, Software Engineering',
+    details: "Dean's and Semester Honors List across all completed semesters.",
     gpa: 'GPA: 3.77 / 4.00',
-    logo: PurdueLogo, // Add Purdue logo for education
+    highlights: ['Compilers', 'Deep Learning', 'Reinforcement Learning', 'Parallel Computing'],
+    logo: PurdueLogo,
   },
   {
     title: 'Bachelor of Science in Computer Science',
     institution: 'Purdue University, West Lafayette, IN',
     period: 'Aug 2021 - May 2025',
-    details: 'Dean’s List (all semesters)',
+    details: "Dean's and Semester Honors List all semesters, plus 2x hackathon winner.",
     gpa: 'GPA: 3.87 / 4.00',
+    highlights: ['Operating Systems', 'Computer Networks', 'Databases', 'Systems Programming'],
     logo: PurdueLogo,
-  },
-];
-
-const relevantCoursework = [
-  'Compilers',
-  'Data Structures and Algorithms',
-  'Data Mining and Machine Learning',
-  'Intro to Artificial Intelligence',
-  'Operating Systems',
-  'Database Systems',
-  'Reinforcement Learning',
-  'Computer Vision',
-  'Programming in C',
-];
-
-const certificationsData = [
-  {
-    title: 'Deep Learning Specialization',
-    provider: 'Coursera',
-    date: 'Feb 2024',
-  },
-  {
-    title: 'Convolutional Networks & Sequence Models',
-    provider: 'Coursera',
-    date: 'Feb 2024',
-  },
-];
-
-const assistantshipData = [
-  {
-    title: 'Graduate Research Assistant',
-    organization: 'Cummins (Machine Learning)',
-  },
-  {
-    title: 'Teaching Assistant',
-    organization: 'CS252 Systems Programming',
   },
 ];
 
@@ -66,50 +32,54 @@ const Education = () => {
         py: 8,
       }}
     >
-      <Container maxWidth="md">
-        {/* Education Section */}
-        <Typography variant="h3" sx={{ mb: 4, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
+      <Container maxWidth="lg">
+        <Typography variant="h3" sx={{ mb: 2, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
           Education
+        </Typography>
+        <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'center', mb: 6, maxWidth: 720, mx: 'auto' }}>
+          Purdue computer science degrees with coursework depth across systems, machine learning,
+          databases, and parallel computing.
         </Typography>
         <Grid container spacing={4}>
           {educationData.map((edu, index) => (
             <Grid item xs={12} md={6} key={index}>
               <Paper
                 sx={{
-                  p: 3,
+                  p: 3.5,
                   display: 'flex',
                   gap: 2,
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
                   background: '#ffffff',
-                  borderRadius: 3,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
+                  borderRadius: 4,
+                  border: '1px solid rgba(16, 32, 51, 0.08)',
+                  boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
+                  height: '100%',
                 }}
               >
-                {/* Purdue Logo */}
                 <Box
                   sx={{
-                    height: 60, // Adjust as needed for logo dimensions
-                    width: 100, // Adjust width for rectangular shape
+                    height: 72,
+                    width: 72,
+                    minWidth: 72,
                     overflow: 'hidden',
-                    backgroundColor: '#f3f4f6', // Fallback color if image doesn't load
+                    backgroundColor: '#f6efe6',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    borderRadius: 3,
                   }}
                 >
                   <img
                     src={edu.logo}
                     alt={`${edu.institution} logo`}
                     style={{
-                      maxHeight: '100%',
-                      maxWidth: '100%',
+                      maxHeight: '80%',
+                      maxWidth: '80%',
                       objectFit: 'contain',
                     }}
                   />
                 </Box>
-                {/* Education Details */}
-                <Box>
+                <Box sx={{ flex: 1 }}>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     {edu.title}
                   </Typography>
@@ -125,101 +95,20 @@ const Education = () => {
                   <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {edu.gpa}
                   </Typography>
-                  {edu.coursework && (
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {edu.coursework}
-                    </Typography>
-                  )}
-                </Box>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
-          Relevant Coursework
-        </Typography>
-        <Grid container spacing={3}>
-          {relevantCoursework.map((course) => (
-            <Grid item xs={12} sm={6} md={4} key={course}>
-              <Paper
-                sx={{
-                  p: 2,
-                  textAlign: 'center',
-                  background: '#ffffff',
-                  borderRadius: 3,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 18px 32px rgba(31, 41, 55, 0.08)',
-                }}
-              >
-                <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 600 }}>
-                  {course}
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* Certifications Section */}
-        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
-          Certifications
-        </Typography>
-        <Grid container spacing={4}>
-          {certificationsData.map((cert, index) => (
-            <Grid item xs={12} md={6} key={index}>
-              <Paper
-                sx={{
-                  p: 3,
-                  display: 'flex',
-                  gap: 2,
-                  alignItems: 'center',
-                  background: '#ffffff',
-                  borderRadius: 3,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
-                }}
-              >
-                <Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    {cert.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {cert.provider}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {cert.date}
-                  </Typography>
-                </Box>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Typography variant="h3" sx={{ my: 6, fontWeight: 700, textAlign: 'center', color: 'text.primary' }}>
-          Teaching & Assistantship
-        </Typography>
-        <Grid container spacing={4}>
-          {assistantshipData.map((role, index) => (
-            <Grid item xs={12} md={6} key={index}>
-              <Paper
-                sx={{
-                  p: 3,
-                  display: 'flex',
-                  gap: 2,
-                  alignItems: 'center',
-                  background: '#ffffff',
-                  borderRadius: 3,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 20px 40px rgba(31, 41, 55, 0.08)',
-                }}
-              >
-                <Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    {role.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {role.organization}
-                  </Typography>
+                  <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mt: 2 }}>
+                    {edu.highlights.map((highlight) => (
+                      <Chip
+                        key={highlight}
+                        label={highlight}
+                        size="small"
+                        sx={{
+                          bgcolor: 'rgba(217, 119, 6, 0.08)',
+                          color: '#9a580d',
+                          fontWeight: 600,
+                        }}
+                      />
+                    ))}
+                  </Stack>
                 </Box>
               </Paper>
             </Grid>

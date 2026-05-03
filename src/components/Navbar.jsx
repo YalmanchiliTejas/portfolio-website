@@ -11,13 +11,14 @@ const Navbar = () => {
   };
 
   const navLinks = [
+    { label: 'Education', href: '#education' },
+    { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Papers', href: '#papers' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
     {
       label: 'Resume',
-      href: 'https://drive.google.com/file/d/1F_ZOHfjxnbX99TnhB_ira_y0F8H7QLtN/view?usp=sharing',
+      href: '/Tejas_Yalamanchili.pdf',
     },
   ];
 
@@ -26,10 +27,10 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          background: 'rgba(255, 255, 255, 0.9)',
+          background: 'rgba(255, 251, 245, 0.82)',
           backdropFilter: 'blur(12px)',
-          boxShadow: '0 12px 30px rgba(31, 41, 55, 0.08)',
-          borderBottom: '1px solid rgba(31, 41, 55, 0.08)',
+          boxShadow: '0 16px 38px rgba(16, 32, 51, 0.08)',
+          borderBottom: '1px solid rgba(16, 32, 51, 0.08)',
         }}
       >
         <Toolbar>
@@ -61,11 +62,11 @@ const Navbar = () => {
               href="/"
               sx={{
                 textDecoration: 'none',
-                color: '#1f2937', // Primary text
+                color: '#102033',
                 fontWeight: 600,
-                transition: 'color 0.3s ease', // Smooth transition on hover
+                transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#5b7cfa', // Accent on hover
+                  color: '#d97706',
                 },
               }}
             >
@@ -84,11 +85,11 @@ const Navbar = () => {
                 rel={link.label === 'Resume' ? 'noopener noreferrer' : ''}
                 sx={{
                   textDecoration: 'none',
-                  color: '#1f2937', // Primary text
+                  color: '#102033',
                   fontWeight: 500,
-                  transition: 'color 0.3s ease', // Smooth transition on hover
+                  transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#5b7cfa', // Accent on hover
+                    color: '#d97706',
                   },
                 }}
               >
@@ -101,10 +102,10 @@ const Navbar = () => {
               href="https://github.com/YalmanchiliTejas"
               target="_blank"
               sx={{
-                color: '#1f2937', // Primary text
-                transition: 'color 0.3s ease', // Smooth transition on hover
+                color: '#102033',
+                transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#5b7cfa', // Accent on hover
+                  color: '#d97706',
                 },
               }}
             >
@@ -114,10 +115,10 @@ const Navbar = () => {
               href="https://linkedin.com/in/tejasyalamanchili"
               target="_blank"
               sx={{
-                color: '#1f2937', // Primary text
-                transition: 'color 0.3s ease', // Smooth transition on hover
+                color: '#102033',
+                transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#5b7cfa', // Accent on hover
+                  color: '#d97706',
                 },
               }}
             >
@@ -127,7 +128,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu for Small Screens */}
           <IconButton
-            sx={{ display: { xs: 'block', md: 'none' }, color: '#1f2937' }}
+            sx={{ display: { xs: 'block', md: 'none' }, color: '#102033' }}
             onClick={toggleDrawer}
           >
             <Menu />
@@ -140,14 +141,14 @@ const Navbar = () => {
         <Box
           sx={{
             width: 250,
-            bgcolor: '#f7f5f0',
+            bgcolor: '#f8f3eb',
             height: '100%',
-            color: '#1f2937',
+            color: '#102033',
           }}
         >
           <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="h6">Menu</Typography>
-            <IconButton onClick={toggleDrawer} sx={{ color: '#1f2937' }}>
+            <IconButton onClick={toggleDrawer} sx={{ color: '#102033' }}>
               <Close />
             </IconButton>
           </Box>
@@ -157,10 +158,10 @@ const Navbar = () => {
                 <ListItemText
                   primary={link.label}
                   sx={{
-                    color: '#1f2937', // Primary text
-                    transition: 'color 0.3s ease', // Smooth transition on hover
+                    color: '#102033',
+                    transition: 'color 0.3s ease',
                     '&:hover': {
-                      color: '#5b7cfa', // Accent on hover
+                      color: '#d97706',
                     },
                   }}
                 />
@@ -172,10 +173,10 @@ const Navbar = () => {
                 href="https://github.com/YalmanchiliTejas"
                 target="_blank"
                 sx={{
-                  color: '#1f2937', // Primary text
-                  transition: 'color 0.3s ease', // Smooth transition on hover
+                  color: '#102033',
+                  transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#5b7cfa', // Accent on hover
+                    color: '#d97706',
                   },
                 }}
               >
@@ -185,10 +186,10 @@ const Navbar = () => {
                 href="https://linkedin.com/in/tejasyalamanchili"
                 target="_blank"
                 sx={{
-                  color: '#1f2937', // Primary text
-                  transition: 'color 0.3s ease', // Smooth transition on hover
+                  color: '#102033',
+                  transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#5b7cfa', // Accent on hover
+                    color: '#d97706',
                   },
                 }}
               >

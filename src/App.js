@@ -15,22 +15,22 @@ const canvasTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#2f5d62',
+      main: '#17324d',
     },
     secondary: {
-      main: '#5b7cfa',
+      main: '#d97706',
     },
     background: {
-      default: '#f7f5f0',
+      default: '#f4efe8',
       paper: '#ffffff',
     },
     text: {
-      primary: '#1f2937',
-      secondary: '#6b7280',
+      primary: '#102033',
+      secondary: '#5f6c7b',
     },
   },
   typography: {
-    fontFamily: '"Manrope", "Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Space Grotesk", "Manrope", "Helvetica", "Arial", sans-serif',
     h1: {
       fontSize: '3.75rem',
       fontWeight: 700,
@@ -57,10 +57,10 @@ function App() {
         <Navbar />
         <Hero />
         <Education />
+        <Experience />
         <Projects />
         <Papers />
         <Skills />
-        <Experience />
         <Contact />
       </div>
     </ThemeProvider>

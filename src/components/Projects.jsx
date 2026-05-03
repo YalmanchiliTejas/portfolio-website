@@ -20,10 +20,10 @@ const projects = [
   {
     title: 'UniLeap',
     description:
-      'Transaction-aware agent runtime library and monitoring platform for reproducible, observable AI deployments.',
+      'Personalized mentoring platform for high school and graduate students navigating college applications and study-abroad logistics.',
     features: [
-      'Built and deployed a runtime library that tracks forward and compensation steps with structured run logging and API keys.',
-      'Developed a production web platform using React, FastAPI, and AWS (S3, CloudFront, Elastic Beanstalk) for real-time dashboards and OAuth-secured access.',
+      'Co-founded UniLeap to support students needing college application and visa assistance for studying abroad.',
+      'Deployed a Django backend on AWS EC2, used Nginx as a load balancer, and shipped a React frontend on AWS Amplify for a reliable student experience.',
     ],
     tech: ['Django', 'React.js', 'AWS EC2', 'AWS Amplify', 'LlamaIndex'],
     logoIcon: <School fontSize="small" />,
@@ -99,8 +99,8 @@ const Projects = () => {
                   p: 3.5,
                   background: '#ffffff',
                   borderRadius: 4,
-                  border: '1px solid rgba(31, 41, 55, 0.08)',
-                  boxShadow: '0 28px 55px rgba(31, 41, 55, 0.1)',
+                  border: '1px solid rgba(16, 32, 51, 0.08)',
+                  boxShadow: '0 28px 55px rgba(16, 32, 51, 0.1)',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 2.5,
@@ -142,7 +142,7 @@ const Projects = () => {
                       label={tech}
                       size="small"
                       variant="outlined"
-                      sx={{ borderColor: 'rgba(31, 41, 55, 0.2)', color: 'text.secondary' }}
+                      sx={{ borderColor: 'rgba(16, 32, 51, 0.2)', color: 'text.secondary' }}
                     />
                   ))}
                 </Box>
@@ -157,11 +157,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: '#2f5d62',
+                        background: '#17324d',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#284f53',
+                          background: '#10263c',
                         },
                       }}
                     >
@@ -177,11 +177,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: '#2f5d62',
+                        background: '#17324d',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#284f53',
+                          background: '#10263c',
                         },
                       }}
                     >
