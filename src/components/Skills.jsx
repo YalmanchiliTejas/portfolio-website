@@ -75,9 +75,9 @@ const Skills = () => {
                       key={skill}
                       label={skill}
                       sx={{
-                        bgcolor: 'rgba(23, 50, 77, 0.05)',
+                        bgcolor: 'rgba(99, 102, 241, 0.06)',
                         color: 'text.primary',
-                        border: '1px solid rgba(23, 50, 77, 0.08)',
+                        border: '1px solid rgba(99, 102, 241, 0.08)',
                         fontWeight: 500,
                       }}
                     />
@@ -107,8 +107,8 @@ const Skills = () => {
                       sx={{
                         p: 1.5,
                         borderRadius: 2.5,
-                        background: 'rgba(217, 119, 6, 0.07)',
-                        border: '1px solid rgba(217, 119, 6, 0.12)',
+                        background: 'rgba(99, 102, 241, 0.07)',
+                        border: '1px solid rgba(99, 102, 241, 0.12)',
                         height: '100%',
                       }}
                     >
@@ -142,7 +142,7 @@ const Skills = () => {
                     sx={{
                       p: 2,
                       borderRadius: 2.5,
-                      background: 'linear-gradient(135deg, rgba(23, 50, 77, 0.04), rgba(217, 119, 6, 0.08))',
+                      background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(31, 41, 55, 0.04))',
                       border: '1px solid rgba(16, 32, 51, 0.08)',
                     }}
                   >

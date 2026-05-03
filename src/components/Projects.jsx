@@ -142,7 +142,7 @@ const Projects = () => {
                       label={tech}
                       size="small"
                       variant="outlined"
-                      sx={{ borderColor: 'rgba(16, 32, 51, 0.2)', color: 'text.secondary' }}
+                      sx={{ borderColor: 'rgba(24, 24, 27, 0.14)', color: 'text.secondary' }}
                     />
                   ))}
                 </Box>
@@ -157,11 +157,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: '#17324d',
+                        background: '#1f2937',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#10263c',
+                          background: '#111827',
                         },
                       }}
                     >
@@ -177,11 +177,11 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       startIcon={<Link />}
                       sx={{
-                        background: '#17324d',
+                        background: '#1f2937',
                         color: '#fff',
                         textTransform: 'none',
                         '&:hover': {
-                          background: '#10263c',
+                          background: '#111827',
                         },
                       }}
                     >

@@ -15,18 +15,18 @@ const canvasTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#12324a',
+      main: '#1f2937',
     },
     secondary: {
-      main: '#b76e2b',
+      main: '#6366f1',
     },
     background: {
-      default: '#f6f1e8',
+      default: '#fafaf8',
       paper: '#ffffff',
     },
     text: {
-      primary: '#142738',
-      secondary: '#62707d',
+      primary: '#18181b',
+      secondary: '#5b6472',
     },
   },
   typography: {

@@ -66,7 +66,7 @@ const Navbar = () => {
                 fontWeight: 600,
                 transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#d97706',
+                  color: '#6366f1',
                 },
               }}
             >
@@ -89,7 +89,7 @@ const Navbar = () => {
                   fontWeight: 500,
                   transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#d97706',
+                    color: '#6366f1',
                   },
                 }}
               >
@@ -105,7 +105,7 @@ const Navbar = () => {
                 color: '#102033',
                 transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#d97706',
+                  color: '#6366f1',
                 },
               }}
             >
@@ -118,7 +118,7 @@ const Navbar = () => {
                 color: '#102033',
                 transition: 'color 0.3s ease',
                 '&:hover': {
-                  color: '#d97706',
+                  color: '#6366f1',
                 },
               }}
             >
@@ -161,7 +161,7 @@ const Navbar = () => {
                     color: '#102033',
                     transition: 'color 0.3s ease',
                     '&:hover': {
-                      color: '#d97706',
+                      color: '#6366f1',
                     },
                   }}
                 />
@@ -176,7 +176,7 @@ const Navbar = () => {
                   color: '#102033',
                   transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#d97706',
+                    color: '#6366f1',
                   },
                 }}
               >
@@ -189,7 +189,7 @@ const Navbar = () => {
                   color: '#102033',
                   transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#d97706',
+                    color: '#6366f1',
                   },
                 }}
               >

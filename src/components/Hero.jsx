@@ -54,8 +54,8 @@ const Hero = () => {
                 label="M.S. Computer Science at Purdue"
                 sx={{
                   alignSelf: 'flex-start',
-                  bgcolor: 'rgba(217, 119, 6, 0.12)',
-                  color: '#b45309',
+                  bgcolor: 'rgba(99, 102, 241, 0.12)',
+                  color: '#4f46e5',
                   fontWeight: 600,
                 }}
               />
@@ -90,7 +90,7 @@ const Hero = () => {
                     label={item}
                     sx={{
                       bgcolor: 'rgba(255, 255, 255, 0.7)',
-                      border: '1px solid rgba(16, 32, 51, 0.08)',
+                      border: '1px solid rgba(24, 24, 27, 0.08)',
                       color: 'text.primary',
                     }}
                   />
@@ -104,11 +104,11 @@ const Hero = () => {
                   variant="contained"
                   size="large"
                   sx={{
-                    bgcolor: '#17324d',
+                    bgcolor: '#1f2937',
                     color: '#fff',
                     textTransform: 'none',
-                    boxShadow: '0 12px 24px rgba(23, 50, 77, 0.22)',
-                    '&:hover': { bgcolor: '#10263c' },
+                    boxShadow: '0 12px 24px rgba(31, 41, 55, 0.14)',
+                    '&:hover': { bgcolor: '#111827' },
                   }}
                 >
                   Explore projects
@@ -122,12 +122,12 @@ const Hero = () => {
                   variant="outlined"
                   size="large"
                   sx={{
-                    color: '#17324d',
-                    borderColor: 'rgba(23, 50, 77, 0.25)',
+                    color: '#1f2937',
+                    borderColor: 'rgba(31, 41, 55, 0.18)',
                     textTransform: 'none',
                     '&:hover': {
-                      bgcolor: 'rgba(23, 50, 77, 0.06)',
-                      borderColor: '#17324d',
+                      bgcolor: 'rgba(31, 41, 55, 0.05)',
+                      borderColor: '#1f2937',
                     },
                   }}
                 >
@@ -151,7 +151,7 @@ const Hero = () => {
                     }}
                   >
                     <Stack spacing={1}>
-                      <Typography variant="subtitle2" sx={{ color: '#d97706', fontWeight: 700 }}>
+                      <Typography variant="subtitle2" sx={{ color: '#6366f1', fontWeight: 700 }}>
                         {highlight.title}
                       </Typography>
                       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -167,17 +167,17 @@ const Hero = () => {
                     p: 2.75,
                     height: '100%',
                     borderRadius: 4,
-                    background: 'linear-gradient(135deg, rgba(23, 50, 77, 0.96), rgba(38, 75, 111, 0.92))',
-                    color: '#f8fafc',
-                    border: '1px solid rgba(16, 32, 51, 0.12)',
-                    boxShadow: '0 24px 45px rgba(16, 32, 51, 0.15)',
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(243, 244, 246, 0.94))',
+                    color: '#18181b',
+                    border: '1px solid rgba(24, 24, 27, 0.08)',
+                    boxShadow: '0 24px 45px rgba(16, 32, 51, 0.08)',
                   }}
                 >
                   <Stack spacing={1.25}>
-                    <Typography variant="subtitle2" sx={{ color: '#fdba74', fontWeight: 700 }}>
+                    <Typography variant="subtitle2" sx={{ color: '#4f46e5', fontWeight: 700 }}>
                       Current focus
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'rgba(248, 250, 252, 0.86)' }}>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                       Production AI tooling, predictive maintenance systems, and agent runtime
                       infrastructure with observability built in from day one.
                     </Typography>

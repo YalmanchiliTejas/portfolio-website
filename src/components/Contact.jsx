@@ -61,13 +61,13 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   sx={{
                     mb: 1,
-                    color: '#d97706',
+                    color: '#6366f1',
                     fontSize: 36,
                   }}
                 >
                   {item.icon}
                 </IconButton>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: '#17324d' }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#1f2937' }}>
                   {item.label}
                 </Typography>
                 <Typography sx={{ color: 'text.secondary' }}>{item.value}</Typography>

@@ -102,8 +102,8 @@ const Education = () => {
                         label={highlight}
                         size="small"
                         sx={{
-                          bgcolor: 'rgba(217, 119, 6, 0.08)',
-                          color: '#9a580d',
+                          bgcolor: 'rgba(99, 102, 241, 0.1)',
+                          color: '#4f46e5',
                           fontWeight: 600,
                         }}
                       />

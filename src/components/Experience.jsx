@@ -122,7 +122,7 @@ const Experience = () => {
                       {exp.title}
                     </Typography>
                     <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
-                      <Typography variant="body1" sx={{ color: '#d97706', fontWeight: 600 }}>
+                      <Typography variant="body1" sx={{ color: '#6366f1', fontWeight: 600 }}>
                         {exp.company}
                       </Typography>
                       <Chip
@@ -143,7 +143,7 @@ const Experience = () => {
                     sx={{
                       mb: 1,
                       color: 'text.secondary',
-                      '&::marker': { color: '#d97706' },
+                      '&::marker': { color: '#6366f1' },
                     }}
                   >
                     {point}

@@ -78,7 +78,7 @@ const Papers = () => {
             </Grid>
           ) : (
             papers.map((paper, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Grid item xs={12} md={8} key={index} sx={{ mx: 'auto' }}>
                 <Card
                   sx={{
                     height: '100%',
@@ -90,7 +90,7 @@ const Papers = () => {
                 >
                   <CardContent sx={{ pb: 2 }}>
                     <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
-                      <Chip label={paper.venue} size="small" sx={{ bgcolor: 'rgba(217, 119, 6, 0.1)', color: '#9a580d' }} />
+                      <Chip label={paper.venue} size="small" sx={{ bgcolor: 'rgba(99, 102, 241, 0.1)', color: '#4f46e5' }} />
                       <Chip label={paper.year} size="small" variant="outlined" sx={{ borderColor: 'rgba(16, 32, 51, 0.18)' }} />
                     </Stack>
                     <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
@@ -117,8 +117,8 @@ const Papers = () => {
                       startIcon={<PictureAsPdf />}
                       endIcon={<ArrowOutward />}
                       sx={{
-                        background: '#17324d',
-                        '&:hover': { background: '#10263c' },
+                        background: '#1f2937',
+                        '&:hover': { background: '#111827' },
                         textTransform: 'none',
                       }}
                     >
